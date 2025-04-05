@@ -11,6 +11,12 @@
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
+        color: #000;
+      }
+
+      body.dark {
+        background-color: #121212;
+        color: #f0f0f0;
       }
 
       header {
@@ -56,14 +62,79 @@
         width: 300px;
       }
 
+      body.dark .card {
+        background-color: #1e1e1e;
+        box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+      }
+
       .card a {
         text-decoration: none;
         color: #0a2342;
         font-weight: bold;
       }
 
+      body.dark .card a {
+        color: #80d8ff;
+      }
+
       .card a:hover {
         text-decoration: underline;
+      }
+
+      /* Toggle Switch Styling */
+      .toggle-container {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 24px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: #0a7e8c;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(26px);
+      }
+
+      .toggle-label {
+        margin-left: 10px;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -77,34 +148,38 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-<!-- Dark Mode Toggle -->
-<div class="toggle-container">
-  <label class="switch">
-    <input type="checkbox" id="mode-toggle">
-    <span class="slider round"></span>
-  </label>
-  <span class="toggle-label">Dark Mode</span>
-</div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="mode-toggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label">Dark Mode</span>
+    </div>
+
     <main>
       <div class="card">
         <h2>Problem Statement</h2>
         <p><a href="problem.html">View Project</a></p>
       </div>
     </main>
-        <!-- Dark Mode Script -->
-        <script>
-          const toggle = document.getElementById('mode-toggle');
-          const body = document.body;
-    
-          if (localStorage.getItem("theme") === "dark") {
-            body.classList.add("dark");
-            toggle.checked = true;
-          }
-    
-          toggle.addEventListener('change', () => {
-            body.classList.toggle("dark");
-            localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
-          });
-        </script>
+
+    <!-- Dark Mode Script -->
+    <script>
+      const toggle = document.getElementById('mode-toggle');
+      const body = document.body;
+
+      // Set dark mode on page load if stored
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
+        toggle.checked = true;
+      }
+
+      toggle.addEventListener('change', () => {
+        body.classList.toggle("dark");
+        localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+      });
+    </script>
   </body>
 </html>
