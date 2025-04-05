@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Statement - Reeko Long</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1>Problem Statement</h1>
+
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="mode-toggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label">Dark Mode</span>
+    </div>
+
+    <div class="project">
+      <h2>Statement Overview</h2>
+      <img src="images/problem.png" alt="Problem Statement Image" />
+      <p>
+        People who want to journal consistently struggle to stay engaged and motivated because existing tools don’t provide meaningful prompts, flexibility, or ways to reflect on their entries, making it hard to build a lasting habit.
+      </p>
+      <p>
+        View the full PDF:
+        <a href="files/statement.pdf" target="_blank">Problem Statement PDF</a>
+      </p>
+      <p><a href="index.html">← Back to Home</a></p>
+    </div>
+
+    <script>
+      const toggle = document.getElementById('mode-toggle');
+      const body = document.body;
+
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
+        toggle.checked = true;
+      }
+
+      toggle.addEventListener('change', () => {
+        body.classList.toggle("dark");
+        localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+      });
+    </script>
+  </body>
+</html>
