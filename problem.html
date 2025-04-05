@@ -51,6 +51,32 @@
       body.dark .back-link {
         color: #80d8ff;
       }
+
+      /* Personas & Storyboards Layout */
+      .persona-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+      }
+
+      .persona-card {
+        width: 260px;
+        text-align: center;
+      }
+
+      .persona-card a {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .persona-card img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+      }
     </style>
   </head>
   <body>
@@ -83,22 +109,23 @@
       </p>
     </div>
 
-    <!-- Persona PDFs -->
+    <!-- Combined Personas + Storyboards -->
     <div class="project">
-      <h2>Personas</h2>
-      <ul>
-        <li><a href="files/Tasha_Alvarez_Persona.pdf" target="_blank">Tasha Alvarez (PDF)</a></li>
-        <li><a href="files/Alex_Duvall_Persona.pdf" target="_blank">Alex Duvall (PDF)</a></li>
-        <li><a href="files/Maya_Brooks_Persona.pdf" target="_blank">Maya Brooks (PDF)</a></li>
-      </ul>
-    </div>
-
-    <!-- Storyboards -->
-    <div class="project">
-      <h2>Storyboards</h2>
-      <img src="images/tashastoryboard.png" alt="Tasha's Storyboard" />
-      <img src="images/alexstoryboard.png" alt="Alex's Storyboard" />
-      <img src="images/mayastoryboard.png" alt="Maya's Storyboard" />
+      <h2>Personas & Storyboards</h2>
+      <div class="persona-section">
+        <div class="persona-card">
+          <a href="files/Tasha_Alvarez_Persona.pdf" target="_blank">Tasha Alvarez (PDF)</a>
+          <img src="images/tashastoryboard.png" alt="Tasha's Storyboard" />
+        </div>
+        <div class="persona-card">
+          <a href="files/Alex_Duvall_Persona.pdf" target="_blank">Alex Duvall (PDF)</a>
+          <img src="images/alexstoryboard.png" alt="Alex's Storyboard" />
+        </div>
+        <div class="persona-card">
+          <a href="files/Maya_Brooks_Persona.pdf" target="_blank">Maya Brooks (PDF)</a>
+          <img src="images/mayastoryboard.png" alt="Maya's Storyboard" />
+        </div>
+      </div>
     </div>
 
     <!-- Dark Mode Script -->
