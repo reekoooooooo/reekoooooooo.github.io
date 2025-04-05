@@ -6,9 +6,14 @@
     <title>Problem Statement - Reeko Long</title>
     <link rel="stylesheet" href="main.css" />
     <style>
+      .top-nav {
+        text-align: center;
+        margin: 20px 0;
+      }
+
       .top-button {
         display: inline-block;
-        margin: 20px;
+        margin: 5px 10px;
         padding: 10px 20px;
         background-color: #0a2342;
         color: #fff;
@@ -22,6 +27,18 @@
         background-color: #0a7e8c;
       }
 
+      .back-link {
+        display: block;
+        margin-top: 10px;
+        color: #0a2342;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
       body.dark .top-button {
         background-color: #0a7e8c;
         color: #fff;
@@ -30,11 +47,18 @@
       body.dark .top-button:hover {
         background-color: #0a2342;
       }
+
+      body.dark .back-link {
+        color: #80d8ff;
+      }
     </style>
   </head>
   <body>
-    <!-- Return to Home Button -->
-    <a href="index.html" class="top-button">← Return to Home</a>
+    <!-- Top Nav -->
+    <div class="top-nav">
+      <a href="index.html" class="top-button">← Return to Home</a>
+      <a href="index.html" class="back-link">Back to Home</a>
+    </div>
 
     <h1>Problem Statement</h1>
 
