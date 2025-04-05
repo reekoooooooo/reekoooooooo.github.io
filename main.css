@@ -1,0 +1,185 @@
+/* Import a modern, professional font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Base Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa; /* Light, clean background */
+  color: #1f2d3d; /* Dark text */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  background-color: #0a2342; /* Deep navy */
+  color: #ffffff;
+  padding: 30px 0;
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Headings */
+h2, h3 {
+  color: #14532d; /* Deep emerald */
+  margin-bottom: 10px;
+}
+
+/* Project Section Cards */
+.project {
+  background-color: #ffffff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 850px;
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Images Inside Project Cards */
+.project img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+a {
+  color: #0a7e8c; /* Sophisticated teal */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Paragraph Links (like "Back to Home") */
+p a {
+  display: inline-block;
+  margin-top: 25px;
+  font-weight: bold;
+  color: #0a2342;
+}
+
+/* About, Skills, Contact Sections */
+.about, .skills, .contact {
+  background-color: #eef2f5;
+  padding: 30px 20px;
+  border-left: 5px solid #14532d;
+  margin: 30px auto;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 850px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive: Stack better on mobile */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .project, .about, .skills, .contact {
+    padding: 20px 15px;
+  }
+
+  .project img {
+    max-width: 100%;
+  }
+}
+/* Toggle Switch Styling */
+.toggle-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .toggle-label {
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  
+  /* Switch */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 25px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #0a7e8c;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  
+  /* Dark Mode Styles */
+  body.dark {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+  }
+  
+  body.dark h1 {
+    background-color: #0a7e8c;
+  }
+  
+  body.dark .project,
+  body.dark .about,
+  body.dark .skills,
+  body.dark .contact {
+    background-color: #2b2b2b;
+    color: #f1f1f1;
+    border-left-color: #0a7e8c;
+  }
+  
+  body.dark a {
+    color: #80d8ff;
+  }
+  
+  body.dark p a {
+    color: #ffffff;
+  }
+  

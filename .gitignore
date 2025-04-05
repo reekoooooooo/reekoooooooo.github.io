@@ -1,0 +1,19 @@
+# Ignore executables
+*.exe
+
+# Ignore log files
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore VS Code settings (optional)
+.vscode/
+
+# Ignore node modules (if you're using Node.js later)
+node_modules/
+
+# Ignore build folders
+dist/
+build/
