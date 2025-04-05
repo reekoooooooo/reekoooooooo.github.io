@@ -5,8 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Problem Statement - Reeko Long</title>
     <link rel="stylesheet" href="main.css" />
+    <style>
+      .top-button {
+        display: inline-block;
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: #0a2342;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+
+      .top-button:hover {
+        background-color: #0a7e8c;
+      }
+
+      body.dark .top-button {
+        background-color: #0a7e8c;
+        color: #fff;
+      }
+
+      body.dark .top-button:hover {
+        background-color: #0a2342;
+      }
+    </style>
   </head>
   <body>
+    <!-- Return to Home Button -->
+    <a href="index.html" class="top-button">← Return to Home</a>
+
     <h1>Problem Statement</h1>
 
     <!-- Dark Mode Toggle -->
@@ -47,8 +76,6 @@
       <img src="images/alexstoryboard.png" alt="Alex's Storyboard" />
       <img src="images/mayastoryboard.png" alt="Maya's Storyboard" />
     </div>
-
-    <p style="text-align: center;"><a href="index.html">← Back to Home</a></p>
 
     <!-- Dark Mode Script -->
     <script>
